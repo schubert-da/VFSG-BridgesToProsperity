@@ -47,7 +47,6 @@ body {
   font-family: "Akkurat Pro";
   min-height: 1280px;
   color: #3b3b3b;
-  font-size: 24px;
 }
 
 a,
@@ -168,6 +167,14 @@ main {
   font-weight: bold;
   font-size: 4.8rem;
 
+  padding-bottom: 0.0rem;
+}
+
+.title .title__header--small {
+  font-family: "Akkurat Pro";
+  font-weight: bold;
+  font-size: 3.2rem;
+
   padding-bottom: 0.5rem;
 }
 
@@ -267,8 +274,7 @@ a.btn-primary{
   font-size: 2.4rem;
   font-weight: 500;
 
-  width: 50ch;
-
+  max-width: 50ch;
   margin-bottom: 2.5rem;
 }
 
@@ -438,7 +444,7 @@ a.btn-primary{
   top: 35rem;
   padding-bottom: 10rem;
 }
-.step--9__para {
+.step--9__para:not(.bar__annotation .step--9__para) {
   margin-bottom: 2.4rem;
   margin-top: 3rem;
 }
@@ -449,29 +455,94 @@ a.btn-primary{
 
 @media (max-width:1000px) {
 
-  main, main section{
+  main, section{
     width: 100%;
     padding: 0;
   }
+
+  #scrolly{
+    display: -webkit-box; 
+  }
+
+  article{
+    width: 100%;
+  }
   
+  .title .title__header {
+    font-size: 3.2rem;
+  }
+  
+  .title .title__subheader{
+    font-size: 2rem;
+  }
 
   .card > div {
     border-radius: 5px;
     background: #efefef;
     border: 1px solid #222;
     opacity: 0.8;
-    padding: 6rem;
+    padding: 2rem;
   }
 
   .card{
     padding: 0;
+
+    position: relative;
+    left: 100%;
+    transform: translateX(-50%);
+
+    min-width: 25rem;
   }
 
   figure{
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%); 
     z-index: -1;
   }
 
+  .step--3, .step--9 {
+    min-width: 0;
+    max-width: 100%;
+    padding: 1rem;
+  }
+
+  .step.card:nth-child(3),
+  .step.card:nth-child(9) {
+    width: 100%;
+  }
+
+  .para{
+    font-family: "Akkurat Pro";
+    font-weight: 400;
+    font-size: 1.5rem !important;
+  
+    max-width: 60ch;
+    padding-bottom: 1rem;
+
+  }
+  
+  .step .step--9{
+    margin-top: 100rem;
+    border: none !important;
+    padding-bottom: 60rem;
+  }
+   
+  .step--9 .step--9__container{
+    display: flex;
+    flex-direction: column;
+  
+    margin-top: 3rem;
+  }
+
+  .step--9 .step--9__container .step--9__graphic-container{
+    padding-right: 0;
+    margin-right: 0;
+    border-right: none;
+  } 
+
+  .step--9__text-container .step--9__mission-text{
+    position: relative;
+    top: 5rem;
+  }
   
 }
