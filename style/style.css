@@ -455,6 +455,14 @@ a.btn-primary{
 
 @media (max-width:1000px) {
 
+  a.btn-primary{
+    font-size: 1.5rem;
+    color: #efefef;
+    background-color: var(--black);
+    border-radius: 5px;
+    padding: 5px 10px;
+  }
+
   main, section{
     width: 100%;
     padding: 0;
@@ -467,9 +475,20 @@ a.btn-primary{
   article{
     width: 100%;
   }
+
+
+  section.title,
+  section.intro {
+    width: 100%;
+    padding: 20px 20px;
+  }
   
   .title .title__header {
     font-size: 3.2rem;
+  }
+  
+  .title .title__header--small {
+    font-size: 2.4rem;
   }
   
   .title .title__subheader{
@@ -511,15 +530,33 @@ a.btn-primary{
     width: 100%;
   }
 
-  .para{
+  .step--1 .step--1__para, 
+  .step--2 .step--2__para, 
+  .step--3 .step--3__para, 
+  .step--4 .step--4__para, 
+  .step--5 .step--5__para, 
+  .step--6 .step--6__para,
+  .step--7 .step--7__para,
+  .step--8 .step--8__para,
+  .step--9 .step--9__para,
+  .para {
     font-family: "Akkurat Pro";
     font-weight: 400;
     font-size: 1.5rem !important;
   
     max-width: 60ch;
     padding-bottom: 1rem;
-
   }
+
+  .step--1 .step--1__ban,
+  .step--6 .step--6__ban,
+  .step--8 .step--8__ban{
+    font-family: "Akkurat Pro";
+    font-weight: bold;
+    font-size: 3rem;
+    padding-bottom: 0.3rem;
+  }
+
   
   .step .step--9{
     margin-top: 100rem;
