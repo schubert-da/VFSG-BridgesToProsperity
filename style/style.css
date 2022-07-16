@@ -17,7 +17,7 @@ body {
   margin: 0;
   padding: 0;
   font-size: 62.5%;
-  transition: background-color 500ms linear 300ms;
+  transition: background-color 500ms linear 400ms;
 }
 
 @font-face {

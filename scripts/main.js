@@ -100,7 +100,7 @@ function handleStepProgress(response) {
                 document.body.style.backgroundColor = "#fff";
                 
                 village_viz.select(".excluded").style("opacity", 0);
-                village_viz.select(".excluded__text").style("opacity", 0);
+                village_viz.select(".excluded_text").style("opacity", 0);
                 village_viz.select(".excluded_black_border").style("opacity", 0);
                 village_viz.select(".excluded_white_border").style("opacity", 0);
             }
