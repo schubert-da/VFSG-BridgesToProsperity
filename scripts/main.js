@@ -96,6 +96,13 @@ function handleStepProgress(response) {
                     .duration(500)
                     .ease(d3.easeQuadIn)
                     .style("opacity", 1);
+
+                document.body.style.backgroundColor = "#fff";
+                
+                village_viz.select(".excluded").style("opacity", 0);
+                village_viz.select(".excluded__text").style("opacity", 0);
+                village_viz.select(".excluded_black_border").style("opacity", 0);
+                village_viz.select(".excluded_white_border").style("opacity", 0);
             }
             else if (progress > 0.66 && village_opacity == 1){
                 village_viz
@@ -103,6 +110,8 @@ function handleStepProgress(response) {
                     .duration(1000)
                     .ease(d3.easeQuadOut)
                     .style("opacity", 0);
+
+                    document.body.style.backgroundColor = "#D49861";
             }
             break;
 
@@ -257,6 +266,7 @@ function handleStepProgress(response) {
             conclusion_opacity = d3.selectAll(".step--9__graphic-container > .step--9__graphic").style("opacity");
 
             if (progress > 0.30 && bridge_opacity == 1){
+
                 bridge_viz
                     .transition()
                     .duration(1000)
@@ -269,6 +279,8 @@ function handleStepProgress(response) {
                     .duration(1000)
                     .ease(d3.easeQuadIn)
                     .style("opacity", 1);
+
+                document.body.style.backgroundColor = "#D49861";
             }
 
             if ( progress > 0.62 && conclusion_opacity == 0 ){
@@ -278,6 +290,10 @@ function handleStepProgress(response) {
                     .delay((d,i) => (1000*i))
                     .ease(d3.easeQuadIn)
                     .style("opacity", 1);
+            }
+
+            if ( progress > 0.62 ){
+                document.body.style.backgroundColor = "#fff";
             }
             break;
 
